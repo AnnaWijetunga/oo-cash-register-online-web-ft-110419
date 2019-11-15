@@ -12,6 +12,7 @@ class CashRegister
   def add_item(item, price, quantity = 1)
     @price = price
     @total += price * quantity
+    @last_transaction == price * quantity
     if quantity > 1
       counter = 0
       while counter < quantity
@@ -32,10 +33,7 @@ class CashRegister
       return "There is no discount to apply."
     end
   end
-  
-  def last_transaction
-    @total = price * quantity
-  end 
+
 
   def void_last_transaction
     @total -= @price
