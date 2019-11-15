@@ -12,7 +12,7 @@ class CashRegister
   def add_item(item, price, quantity = 1)
     @price = price
     @total += price * quantity
-    @last_transaction == price * quantity
+    @last_transaction = price * quantity
     #except last_transaction instead of total, and not adding to it, but setting it equal to
     if quantity > 1
       counter = 0
