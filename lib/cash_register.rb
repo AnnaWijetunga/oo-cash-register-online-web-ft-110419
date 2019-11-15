@@ -36,7 +36,6 @@ class CashRegister
   def void_last_transaction
     # @total -= @price
     @total - last_transaction 
-    # returns the total to 0.0 if all items have been removed
   end
 
 end
